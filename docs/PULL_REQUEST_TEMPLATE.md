@@ -19,7 +19,15 @@ git checkout <feature_branch>
 
 ## Impacted Areas in Application
 
-List general components of the application that this PR will affect:
+**New Files**:
+
+
+**Modified Files**:
+
+
+**Deleted Files**:
+
+
 
 ## Mentions @username
 
