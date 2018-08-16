@@ -59,3 +59,7 @@ Employee_View.py -> class Employee_View
 ## Pull Request Conventions
 
 1. Pull requests should include a list of which files were added, modified, or deleted in this PR so we can check for conflicts and scope of change.
+
+## Remigrating
+
+Assuming you've put the script in your file, running ```pyremigrate website```
