@@ -20,10 +20,10 @@ INSERT INTO website_product_type VALUES (null, 'Pet');
 INSERT INTO website_product_type VALUES (null, 'Home Services');
 INSERT INTO website_product_type VALUES (null, 'Music');
 
-INSERT INTO website_payment_types VALUES (null, 'Visa');
-INSERT INTO website_payment_types VALUES (null, 'Mastercard');
-INSERT INTO website_payment_types VALUES (null, 'Discover');
-INSERT INTO website_payment_types VALUES (null, 'Venmo');
-INSERT INTO website_payment_types VALUES (null, 'Paypal');
+INSERT INTO website_payment_type VALUES (null, 'Visa');
+INSERT INTO website_payment_type VALUES (null, 'Mastercard');
+INSERT INTO website_payment_type VALUES (null, 'Discover');
+INSERT INTO website_payment_type VALUES (null, 'Venmo');
+INSERT INTO website_payment_type VALUES (null, 'Paypal');
 
 
