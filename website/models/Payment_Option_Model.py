@@ -2,7 +2,7 @@ from django.db import models
 from django.db.models import *
 
 # Create your models here.
-class Payment_Options(models.Model):
+class Payment_Option(models.Model):
     customer_id = models.ForeignKey(
         "Customer",
         on_delete=models.CASCADE,

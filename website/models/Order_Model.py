@@ -8,7 +8,7 @@ class Order(models.Model):
         on_delete=models.CASCADE,
     )
     payment_id = models.ForeignKey(
-        "Payment_Options",
+        "Payment_Option",
         on_delete=models.CASCADE,
     )
     is_complete = models.BooleanField(default=False)
