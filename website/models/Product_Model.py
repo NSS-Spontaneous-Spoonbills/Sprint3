@@ -1,14 +1,14 @@
-from django.contrib.auth.models import Customer, Product_Type
 from django.db import models
+from django.db.models import *
 
 # Create your models here.
 class Product(models.Model):
     seller_id = models.ForeignKey(
-        Customer,
+        "Customer",
         on_delete=models.CASCADE,
     )
     type_id = models.ForeignKey(
-        Product_Type,
+        "Product_Type",
         on_delete=models.CASCADE,
     )
     title = models.CharField(max_length=255)

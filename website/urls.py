@@ -1,6 +1,8 @@
 from django.conf.urls import url
-
 from . import views
+from .views import index, login_user, register
+
+# from . import views
 
 app_name = "website"
 urlpatterns = [
