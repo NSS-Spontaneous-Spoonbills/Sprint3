@@ -9,15 +9,14 @@
 
 <body>
   <h1>Welcome to Bangazon!</h1>
-  {% block main %} {% include "nav_bar.html" with nav_location=view.location %} {% endblock main %} {% if user.is_authenticated
-  %}
+  {% block main %} {% include "nav_bar.html" with nav_location=view.location %} {% if user.is_authenticated %}
   <h1>Bangazon says... hello {{ user.username }}!</h1>
-  <a href="{% url 'website:logout' %}">Logout</a>
+  <a href="{% url 'logout' %}">Logout</a>
   {% else %}
   <div>
-    <a href="{% url 'website:login' %}">Login/Register</a>
+    <a href="{% url 'login' %}">Login/Register</a>
   </div>
-  {% endif %}
+  {% endif %} {% endblock %} {% block content %} {% endblock %}
 </body>
 
 </html>
