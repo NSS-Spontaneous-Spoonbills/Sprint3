@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from . import views
-from .views import index, login_user, register, user_logout
+from .views import *
 
 # from . import views
 
