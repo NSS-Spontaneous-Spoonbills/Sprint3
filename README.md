@@ -63,7 +63,9 @@ Employee_View.py -> class Employee_View
 ## Remigrating
 
 **Mac**
-Assuming you've put the script in your file, running ```pyremigrate website```
+Save a copy the ```django_data.sh``` script from the project root as django_data.sh in usr/local/bin (Which is at your machine's root, not your Users folder) Do not move the shell script file itself out of the project root.
+
+Run this script however it is you Mac weirdos do it, remembering to pass in the parameters ```website faker_factory``` 
 
 **Windows**
 In command line, run this script: ```. django_data.sh website faker_factory```
