@@ -15,5 +15,7 @@
     <div><a href="{% url 'website:register' %}">Register</a></div>
     <div><a href="{% url 'website:login' %}">Login</a></div>
     {% endif %}
+    {% block content %}
+    {% endblock %}
   </body>
 </html>
