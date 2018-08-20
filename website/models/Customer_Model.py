@@ -10,7 +10,7 @@ class Customer(models.Model):
     street = models.CharField(max_length=25)
     city = models.CharField(max_length=25)
     state = models.CharField(max_length=25)
-    zip = models.PositiveSmallIntegerField()
+    zip = models.PositiveSmallIntegerField(blank=True)
     phone = models.CharField(max_length=10)
     username = models.CharField(max_length=25)
 
