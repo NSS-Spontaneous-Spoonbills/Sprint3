@@ -20,13 +20,11 @@ class Command(BaseCommand):
 
         seeder.add_entity(Customer, 12)
         seeder.add_entity(Payment_Type, 12)
-        seeder.add_entity(Order, 12)
-        # seeder.add_entity(Payment_Option, 12, {
-        #                   'Account_Num': lambda x: random.randint(11111, 99999)})
         seeder.add_entity(Payment_Option, 12, {
             'account_number': lambda x: random.randint(11111, 99999)})
+        seeder.add_entity(Order, 12)
+        seeder.add_entity(Product_Type, 12)
         seeder.add_entity(
             Product, 12, {'title': lambda x: seeder.faker.catch_phrase()})
-        seeder.add_entity(Product_Type, 12)
 
         inserted_pks = seeder.execute()

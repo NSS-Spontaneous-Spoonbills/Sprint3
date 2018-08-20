@@ -1,8 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
 
-# Create your models here.
-
 
 class Customer(models.Model):
     create_date = models.CharField(max_length=15, default='2018-07-16')
@@ -12,7 +10,7 @@ class Customer(models.Model):
     street = models.CharField(max_length=25)
     city = models.CharField(max_length=25)
     state = models.CharField(max_length=25)
-    zipcode = models.CharField(max_length=10)
+    zip = models.PositiveSmallIntegerField()
     phone = models.CharField(max_length=10)
     username = models.CharField(max_length=25)
 

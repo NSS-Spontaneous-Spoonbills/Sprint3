@@ -1,8 +1,6 @@
 from django.db import models
 from django.db.models import *
 
-# Create your models here.
-
 
 class Order(models.Model):
     customer_id = models.ForeignKey(

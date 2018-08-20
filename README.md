@@ -62,4 +62,11 @@ Employee_View.py -> class Employee_View
 
 ## Remigrating
 
+**Mac**
 Assuming you've put the script in your file, running ```pyremigrate website```
+
+**Windows**
+In command line, run this script: ```. django_data.sh website faker_factory```
+
+**Both**
+After running the remigrate script, open DB Browser and run the SQL script from the [sql directory in project root](./sql/bangazon.sql)
