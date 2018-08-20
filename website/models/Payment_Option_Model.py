@@ -1,14 +1,14 @@
 from django.db import models
 from django.db.models import *
 
-# Create your models here.
+
 class Payment_Option(models.Model):
     customer_id = models.ForeignKey(
         "Customer",
         on_delete=models.CASCADE,
     )
     payment_type_id = models.ForeignKey(
-        "Product",
+        "Payment_Type",
         on_delete=models.CASCADE,
     )
     account_number = models.CharField(max_length=10)
