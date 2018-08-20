@@ -12,6 +12,7 @@
     <a href="{% url 'website:logout' %}">Logout</a>
     {% else %}
     <h1>Bangazon says...</h1>
+    {% block main %} {% include "nav_bar.html" with nav_location=view.location %} {% endblock main %}
     <div><a href="{% url 'website:login' %}">Login/Register</a></div>
     {% endif %}
   </body>
