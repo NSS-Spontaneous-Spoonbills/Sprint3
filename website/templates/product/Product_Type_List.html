@@ -1,0 +1,8 @@
+{% extends "website/index.html" %} {% block content %}
+<h1>Product Type List</h1>
+
+{% for product_type in product_types %}
+<div class="hiking">
+    <p>{{product_type}}</p>
+</div>
+{% endfor %} {% endblock %}

@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from . import views
 from .views import index, login_user, register
+from .views import Product_Type_View
 
 # from . import views
 
@@ -12,4 +13,5 @@ urlpatterns = [
     url(r'^register$', views.register, name='register'),
     # url(r'^sell$', views.sell_product, name='sell'),
     # url(r'^products$', views.list_products, name='list_products'),
+    url(r'^product_types$', views.Product_Type_View, name='product_type_list'),
 ]
