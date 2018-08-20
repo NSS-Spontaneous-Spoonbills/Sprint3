@@ -15,7 +15,7 @@ def register(request):
     '''Handles the creation of a new user for authentication
 
     Method arguments:
-      request -- The full HTTP request object
+    request -- The full HTTP request object
     '''
 
     # A boolean value for telling the template whether the registration was successful.
@@ -51,7 +51,7 @@ def login_user(request):
     '''Handles the creation of a new user for authentication
 
     Method arguments:
-      request -- The full HTTP request object
+    request -- The full HTTP request object
     '''
 
     # Obtain the context for the user's request.

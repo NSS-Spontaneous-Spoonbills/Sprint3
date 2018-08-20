@@ -12,8 +12,7 @@
     <a href="{% url 'website:logout' %}">Logout</a>
     {% else %}
     <h1>Bangazon says...</h1>
-    <div><a href="{% url 'website:register' %}">Register</a></div>
-    <div><a href="{% url 'website:login' %}">Login</a></div>
+    <div><a href="{% url 'website:login' %}">Login/Register</a></div>
     {% endif %}
   </body>
 </html>
