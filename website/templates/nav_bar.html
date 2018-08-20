@@ -1,0 +1,43 @@
+<nav>
+    <form action="/" method='get'>
+    <input type="submit" value="Home">
+    </form>
+
+    <input type="search" placeholder="Search">
+
+    <form action="/website/all_products" method='get'>
+    <input type="submit" value="All Products">
+    </form>
+    {% if user.is_authenticated %}
+    <form action="/website/sell_a_product" method='get'>
+    <input type="submit" value="Sell A Product">
+    </form>
+    {% endif %}
+    <form action="/website/notifications" method='get'>
+    <input type="submit" value="Notifications">
+    </form>
+    {% if user.is_authenticated %}
+    <div>
+        <form action="/website/my_account" method='get'>
+        <input type="submit" value="My Account">
+            <ul>
+                <li>
+                    <form action="/website/my_products">
+                    <input type="submit" value="My Products">
+                    </form>
+                </li>
+                <li>
+                    <form action="/website/order_history">
+                    <input type="submit" value="Order History">
+                    </form>
+                </li>
+                <li>
+                    <form action="/website/payment">
+                    <input type="submit" value="Payments">
+                    </form>
+                </li>
+            </ul>
+        </form>
+    </div>
+    {% endif %}
+</nav>
