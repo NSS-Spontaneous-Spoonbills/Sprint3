@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from . import views
-from .views import index, login_user, register
 from .views import Product_Type_View
+from .views import *
 
 # from . import views
 

@@ -62,4 +62,15 @@ Employee_View.py -> class Employee_View
 
 ## Remigrating
 
-Assuming you've put the script in your file, running ```pyremigrate website```
+1. From the command line ```pip install django_seed```
+
+**Mac**
+Save a copy the ```django_data.sh``` script from the project root as django_data.sh in usr/local/bin (Which is at your machine's root, not your Users folder) Do not move the shell script file itself out of the project root.
+
+Run this script ``` django_data.sh website faker_factory ``` 
+
+**Windows**
+In command line, run this script: ```. django_data.sh website faker_factory```
+
+**Both**
+After running the remigrate script, open DB Browser and run the SQL script from the [sql directory in project root](./sql/bangazon.sql)
