@@ -62,6 +62,8 @@ Employee_View.py -> class Employee_View
 
 ## Remigrating
 
+1. From the command line ```pip install django_seed```
+
 **Mac**
 Save a copy the ```django_data.sh``` script from the project root as django_data.sh in usr/local/bin (Which is at your machine's root, not your Users folder) Do not move the shell script file itself out of the project root.
 
