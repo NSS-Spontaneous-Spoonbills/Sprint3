@@ -6,6 +6,7 @@
     <title>Bangazon</title>
   </head>
   <body>
+    {% include "nav_bar.html" with nav_location=view.location %}
     <h1>My Account</h1>
     <h2>Account Created: {{ user.date_joined }}</h2>
     <h2>Username: {{ user.username }}</h2>
@@ -14,10 +15,7 @@
     <h2>Phone Number: {{ customer.phone }}</h2>
     <h2>Address: {{ customer.street }} {{customer.city}},{{customer.state}} {{customer.zip}}</h2>
 
-    <a href="{% url 'website:index' %}">Go back to the home page</a>
     <a>Edit your account information</a>
-    <a>Payment Options</a>
-    <a>Order History</a>
 
   </body>
 </html>

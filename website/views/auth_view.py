@@ -15,7 +15,7 @@ def register(request):
     '''Handles the creation of a new user for authentication
 
     Method arguments:
-      request -- The full HTTP request object
+    request -- The full HTTP request object
     '''
 
     # A boolean value for telling the template whether the registration was successful.
@@ -51,7 +51,7 @@ def login_user(request):
     '''Handles the creation of a new user for authentication
 
     Method arguments:
-      request -- The full HTTP request object
+    request -- The full HTTP request object
     '''
 
     # Obtain the context for the user's request.
@@ -69,17 +69,17 @@ def login_user(request):
         if authenticated_user is not None:
             login(request=request, user=authenticated_user)
             print(request.GET.get('next'))
-            return HttpResponseRedirect(request.POST.get('next', '/'))
-
-            
+            return HttpResponseRedirect(request.POST.get('next', '/website'))
 
         else:
             # Bad login details were provided. So we can't log the user in.
             print("Invalid login details: {}, {}".format(username, password))
             return HttpResponse("Invalid login details supplied.")
+    else:
+            return render(request, 'login.html', {}, context)
 
 
-    return render(request, 'login.html', {}, context)
+
 
 # Use the login_required() decorator to ensure only those logged in can access the view.
 @login_required
@@ -89,7 +89,7 @@ def user_logout(request):
 
     # Take the user back to the homepage. Is there a way to not hard code
     # in the URL in redirects?????
-    return HttpResponseRedirect('/')
+    return HttpResponseRedirect('/website')
 
 
 # def sell_product(request):
