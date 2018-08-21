@@ -13,5 +13,6 @@ urlpatterns = [
     # url(r'^sell$', views.sell_product, name='sell'),
     # url(r'^products$', views.list_products, name='list_products'),
     url(r'^product_types$', views.Product_Type_List_View, name='product_types'),
+    url(r'^product_category$', view.Product_Category_View, name='product_category'),
 ]
 
