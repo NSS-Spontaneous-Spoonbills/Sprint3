@@ -14,5 +14,7 @@
     {% else %}
     <div><a href="{% url 'website:login' %}">Login/Register</a></div>
     {% endif %}
+    {% block content %}
+    {% endblock %}
   </body>
 </html>
