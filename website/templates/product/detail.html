@@ -3,7 +3,7 @@
 <p>{{product.description}}</p>
 <p>${{product.price}}</p>
 
-{% for type in product_types %} {% if type.id == product_types.id %}
+{% for type in product_types %} {% if type.id == type.product.type_id %}
 <p>Category: {{type.type_name}}</p>
 {% endif %}{% endfor %}
 
@@ -16,4 +16,4 @@
 {% for seller in sellers %} {% if seller.id == product.seller_id %}
 <p>Seller: {{seller.username}}</p>
 <p>Seller Location: {{seller.city}}, {{seller.state}}</p>
-{% endif %} {% endfor %} {%endblock%}
+{% endif %} {% endfor %} {% endblock %}
