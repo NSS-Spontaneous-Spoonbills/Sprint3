@@ -10,6 +10,6 @@ urlpatterns = [
     url(r'^register$', views.register, name='register'),
     # url(r'^sell$', views.sell_product, name='sell'),
     # url(r'^products$', views.list_products, name='list_products'),
-    path('products/<pk>/', views.Product_Detail_View, name="product_detail"),
+    path('product/<pk>/', views.Product_Detail_View, name="product_detail"),
     url(r'^product_types$', views.Product_Type_List_View, name='product_types'),
 ]
