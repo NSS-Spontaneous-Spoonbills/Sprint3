@@ -1,7 +1,7 @@
 {% extends 'index.html' %}{% block content %}
 <h1>{{product.title}}</h1>
 <p>{{product.description}}</p>
-<p>{{product.price}}</p>
+<p>${{product.price}}</p>
 
 {% for type in product_types %} {% if type.id == product_types.id %}
 <p>Category: {{type.type_name}}</p>
