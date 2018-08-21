@@ -8,15 +8,11 @@
 </head>
 
 <body>
+  {% block main %} {% include "nav_bar.html" with nav_location=view.location %} {% endblock main %}
   <h1>Welcome to Bangazon!</h1>
-  {% block main %} {% include "nav_bar.html" with nav_location=view.location %} {% if user.is_authenticated %}
   <h1>Bangazon says... hello {{ user.username }}!</h1>
-  <a href="{% url 'logout' %}">Logout</a>
-  {% else %}
-  <div>
-    <a href="{% url 'login' %}">Login/Register</a>
-  </div>
-  {% endif %} {% endblock %} {% block content %} {% endblock %}
+
+  {% block content %} {% endblock %}
 </body>
 
 </html>
