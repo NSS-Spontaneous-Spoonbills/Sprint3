@@ -4,16 +4,9 @@ from django.http import HttpResponse
 
 @login_required()
 def my_account_home(request):
-    """[summary]
+    """This will either redirect the user to the their account home page view or it will redirect them to login page.
     
-    Arguments:
-        request {[type]} -- [description]
+    Author: Cashew Rose
     """
 
     return render(request, 'account/my_account_index.html', {})
-
-
-# def wall(request):
-
-#     return HttpResponse("Invalid login details supplied.")
-
