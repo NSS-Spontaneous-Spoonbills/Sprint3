@@ -25,6 +25,6 @@ class Command(BaseCommand):
         seeder.add_entity(Order, 12)
         seeder.add_entity(Product_Type, 12)
         seeder.add_entity(
-            Product, 12, {'title': lambda x: seeder.faker.catch_phrase()})
+            Product, 120, {'title': lambda x: seeder.faker.catch_phrase()})
 
         inserted_pks = seeder.execute()
