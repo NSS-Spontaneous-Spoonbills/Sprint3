@@ -6,13 +6,9 @@
     <title>Bangazon</title>
   </head>
   <body>
-    <h1>Welcome to Bangazon!</h1>
     {% block main %} {% include "nav_bar.html" with nav_location=view.location %} {% endblock main %}
-    {% if user.is_authenticated %}
+    <h1>Welcome to Bangazon!</h1>
     <h1>Bangazon says... hello {{ user.username }}!</h1>
-    <a href="{% url 'website:logout' %}">Logout</a>
-    {% else %}
-    <div><a href="{% url 'website:login' %}">Login/Register</a></div>
-    {% endif %}
+
   </body>
 </html>
