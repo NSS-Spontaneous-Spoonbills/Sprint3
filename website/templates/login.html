@@ -9,6 +9,7 @@
     <h1>Login to Bangazon</h1>
 
     <form id="login_form" method="post" action="{% url 'website:login' %}">
+        {% comment %} This weird input hides the variable that holds a redirect path when the login form is submitted. {% endcomment %}
         <input type="hidden" name="next" value="{{ next }}"/>
         {% csrf_token %} Username:
         <input type="text" name="username" value="" size="50" />
