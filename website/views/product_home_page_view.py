@@ -17,5 +17,4 @@ def Product_Home_List_View(request):
      ]
     """
     lastest_twenty_products = Product.objects.order_by('-id')[:20]
-    print('lastest_twenty_products')
-    return render(request, 'website/index.html', {'latest_products': latest_products})
+    return render(request, 'index.html', {'latest_products': lastest_twenty_products})
