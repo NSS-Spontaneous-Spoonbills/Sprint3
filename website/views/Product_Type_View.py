@@ -57,7 +57,7 @@ def Product_Type_List_View(request):
     return render(request, 'product/Product_Type_List.html', {'product_types': product_types})
 
 
-def Product_Category_view(request, pk):
+def Product_Category_View(request, pk):
     """ displays all products in a single category
 
         Author: David Paul
