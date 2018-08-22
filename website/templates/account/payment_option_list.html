@@ -1,13 +1,14 @@
 {% extends 'index.html' %}{% block content %}
 
 <h1>Your Payment Types</h1>
-{% comment %}<a href="{% url 'payment_list' %}">Add A New Payment Type</a>{% endcomment %}
+{% comment %}<a href="{% url 'payment_list'  %}">Add A New Payment Type</a>{% endcomment %}
 
 {% for payment in payments %}
+{% if payment.customer_id_id == 13  %}
 <div class="payment">
-    <a>Payment Number {{payment.id}}</a>
+    <a>Payment Number {{payment.account_number}}</a>
     <a>Update</a>
-
+    {% endif %}
     {% comment %}
 
     {% if payment.has_been_assigned == False %}
