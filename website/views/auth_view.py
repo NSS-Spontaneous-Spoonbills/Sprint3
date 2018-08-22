@@ -56,6 +56,7 @@ def login_user(request):
 
     # Obtain the context for the user's request.
     context = RequestContext(request)
+    next = request.GET.get('next') or '/website'
 
     # If the request is a HTTP POST, try to pull out the relevant information.
     if request.method == 'POST':
@@ -68,7 +69,6 @@ def login_user(request):
         # If authentication was successful, log the user in
         if authenticated_user is not None:
             login(request=request, user=authenticated_user)
-            print(request.GET.get('next'))
             return HttpResponseRedirect(request.POST.get('next', '/website'))
 
         else:
@@ -76,7 +76,7 @@ def login_user(request):
             print("Invalid login details: {}, {}".format(username, password))
             return HttpResponse("Invalid login details supplied.")
     else:
-            return render(request, 'login.html', {}, context)
+            return render(request, 'login.html', {'next': next})
 
 
 
