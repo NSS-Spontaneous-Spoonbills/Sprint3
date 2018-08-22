@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from website.models import Product_Type, Product
 
 def Product_Type_List_View(request):
@@ -51,8 +51,19 @@ def Product_Type_List_View(request):
             'type_name': product_type.type_name,
             # filter the product by type and count total in each category
             'count': Product.objects.filter(type_id=product_type.id).count(),
-            'products': dict_product_list
+            'products': dict_product_list,
+            'type_id': product_type.id
         }
         # append product type dict to final product types list
         product_types.append(product_type_dict)
-    return render(request, 'product/product_type_list.html', {'product_types': product_types})
+    return render(request, 'product/Product_Type_List.html', {'product_types': product_types})
+
+
+def product_category_view(request, pk):
+    """ displays all products in a single category
+
+        Author: David Paul
+    """
+    product_category = get_object_or_404(Product_Type, pk=pk)
+    products = Product.objects.filter(type_id=pk)
+    return render(request, 'product/product_category.html', {'product_category': product_category, 'products': products})

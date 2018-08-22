@@ -1,0 +1,10 @@
+{% extends "index.html" %} {% block content %}
+<h1>Product Category: {{product_category.type_name}}</h1>
+{% for product in products %}
+<div class="product">
+    <ul>
+        <li> <a href="/website/product/{{product.id}}">{{product.title}}</a></li>
+    </ul>
+</div>
+
+{% endfor %} {% endblock %}
