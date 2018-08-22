@@ -51,7 +51,8 @@ def Product_Type_List_View(request):
             'type_name': product_type.type_name,
             # filter the product by type and count total in each category
             'count': Product.objects.filter(type_id=product_type.id).count(),
-            'products': dict_product_list
+            'products': dict_product_list,
+            'type_id': product_type.id
         }
         # append product type dict to final product types list
         product_types.append(product_type_dict)
@@ -64,4 +65,5 @@ def product_category_view(request, pk):
         Author: David Paul
     """
     product_category = get_object_or_404(Product_Type, pk=pk)
-    return render(request, '/product_category.html', {'product_category': product_category})
+    products = Product.objects.filter(type_id=pk)
+    return render(request, 'product/product_category.html', {'product_category': product_category, 'products': products})

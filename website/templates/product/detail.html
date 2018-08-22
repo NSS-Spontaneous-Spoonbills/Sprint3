@@ -4,7 +4,7 @@
 <p>${{product.price}}</p>
 
 {% for type in product_types %} {% if product.type_id_id == type.id %}
-<p>Category: {{type.type_name}}</p>
+<p>Category: <a href="/website/product_category/{{type.id}}">{{type.type_name}}</a></p>
 {% endif %}{% endfor %}
 
 <h3>Seller Information</h3>
