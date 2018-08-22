@@ -16,7 +16,8 @@
     <br />
 
     <form id="user_form" method="post" action="{% url 'website:register' %}" enctype="multipart/form-data">
-
+        {% comment %} This weird input hides the variable that holds a redirect path when the register form is submitted. {% endcomment %}
+        <input type="hidden" name="next" value="/website"/>
         {% csrf_token %}
 
         <!-- Display each form. The as_p method wraps each element in a paragraph
