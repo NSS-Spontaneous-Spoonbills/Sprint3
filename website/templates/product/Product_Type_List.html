@@ -3,12 +3,15 @@
 
 {% for product_type in product_types %}
 <div class="product">
-  <p><a href="/website/product_category/{{product_type.type_id}}">{{product_type.type_name}}</a> <span>Total: {{product_type.count}}</span></p>
+  <p>Product category:
+  <a href="/website/product_category/{{product_type.type_id}}">{{product_type.type_name}}</a>
+  </p>
     <ul>
         {% for product in product_type.products %}
             <li> <a href="/website/product/{{product.id}}">{{product.title}}</a></li>
         {% endfor %}
     </ul>
+  <p><span>Total: {{product_type.count}}</span></p>
 </div>
 
 {% endfor %} {% endblock %}
