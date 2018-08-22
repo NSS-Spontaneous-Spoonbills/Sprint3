@@ -4,7 +4,7 @@
 {% comment %}<a href="{% url 'payment_list'  %}">Add A New Payment Type</a>{% endcomment %}
 
 {% for payment in payments %}
-{% if payment.customer_id_id == 13  %}
+{% if payment.customer_id_id == user.customer.id  %}
 <div class="payment">
     <a>Payment Number {{payment.account_number}}</a>
     <a>Update</a>
