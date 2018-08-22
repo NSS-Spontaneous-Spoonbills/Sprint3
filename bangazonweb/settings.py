@@ -50,6 +50,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+LOGIN_URL='/website/login'
+
 ROOT_URLCONF = 'bangazonweb.urls'
 
 TEMPLATES = [
