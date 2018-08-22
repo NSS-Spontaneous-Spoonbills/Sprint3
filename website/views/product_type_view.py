@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from website.models import Product_Type, Product
 
 def Product_Type_List_View(request):
-    """Displays all prducts in the database
+    """Displays all products in the database
     Author: Jessica Swift
 
     [
@@ -27,6 +27,7 @@ def Product_Type_List_View(request):
                 },
                 {
                     'title': 'air mattress'
+                    'title':
                 }
             ]
         }

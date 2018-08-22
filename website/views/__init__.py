@@ -1,3 +1,4 @@
-from .Product_Type_View import Product_Type_List_View, Product_Category_View
 from .product_detail_view import *
+from .product_type_view import Product_Type_List_View, Product_Category_View
 from .auth_view import index, login_user, register, user_logout
+from .product_home_page_view import Product_Home_List_View
