@@ -8,6 +8,7 @@ urlpatterns = [
     url(r'^login$', views.login_user, name='login'),
     url(r'^logout$', views.user_logout, name='logout'),
     url(r'^register$', views.register, name='register'),
+    path('payment_types/', views.payment_list_view, name='payment_list'),
     # url(r'^sell$', views.sell_product, name='sell'),
     # url(r'^products$', views.list_products, name='list_products'),
     path('product/<pk>/', views.Product_Detail_View, name="product_detail"),

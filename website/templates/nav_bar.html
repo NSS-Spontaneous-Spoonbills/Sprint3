@@ -17,11 +17,11 @@
             <div class="dropdown_content">
                 <a href="{% url 'website:my_products' %}">My Products</a>
                 <a href="{% url 'website:order_history' %}">Order History</a>
-                <a href="{% url 'website:payment' %}">Payment</a>
             </div>
         </div>
         {% endcomment %}
         {% if user.is_authenticated %}
+        <a href="{% url 'website:payment_list' %}">Payment</a>
         <a href="{% url 'website:logout' %}">Logout</a>
         {% else %}
         <a href="{% url 'website:login' %}">Login/Register</a>

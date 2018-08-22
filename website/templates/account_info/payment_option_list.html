@@ -1,0 +1,19 @@
+{% extends 'index.html' %}{% block content %}
+
+<h1>Your Payment Types</h1>
+{% comment %}<a href="{% url 'payment_list' %}">Add A New Payment Type</a>{% endcomment %}
+
+{% for payment in payments %}
+<div class="payment">
+    <a>Payment Number {{payment.id}}</a>
+    <a>Update</a>
+
+    {% comment %}
+
+    {% if payment.has_been_assigned == False %}
+    <a href="{% url 'computer_delete' pk=computer.pk %}">Delete</a>
+
+    {% endif %}
+    {% endcomment %}
+</div>
+{% endfor %} {% endblock %}

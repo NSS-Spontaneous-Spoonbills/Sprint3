@@ -15,3 +15,5 @@ def Product_Detail_View(request, pk):
 
 # seller_id should return the name
 # type id should return the product type
+
+
