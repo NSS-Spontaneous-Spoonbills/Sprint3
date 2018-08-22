@@ -58,10 +58,10 @@ def Product_Type_List_View(request):
     return render(request, 'product/Product_Type_List.html', {'product_types': product_types})
 
 
-def Product_Category_View(request, pk):
+def product_category_view(request, pk):
     """ displays all products in a single category
 
         Author: David Paul
     """
-    Product_Category = get_object_or_404(Product_Type, pk=pk)
-    return render(request, 'website/product_category/', {'Product_Category': Product_Category})
+    product_category = get_object_or_404(Product_Type, pk=pk)
+    return render(request, '/product_category.html', {'product_category': product_category})
