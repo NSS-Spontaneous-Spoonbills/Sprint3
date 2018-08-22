@@ -1,16 +1,25 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Bangazon</title>
-  </head>
-  <body>
-    {% block main %} {% include "nav_bar.html" with nav_location=view.location %} {% endblock main %}
-    <h1>Welcome to Bangazon!</h1>
-    <h1>Bangazon says... hello {{ user.username }}!</h1>
 
-    {% block content %}
-    {% endblock %}
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Bangazon</title>
+</head>
+
+<body>
+  {% block main %} {% include "nav_bar.html" with nav_location=view.location %} {% endblock main %}
+  <h1>Welcome to Bangazon!</h1>
+  <h1>Bangazon says... hello {{ user.username }}!</h1>
+
+  {% block content %}
+
+  <h3>My last 20 Products:</h3>
+  {% for latest_product in latest_products %}
+  <div class="product_list">
+    <p>{{latest_product.title}}</p>
+  </div>
+  {% endfor %} {% endblock content %}
+</body>
+
 </html>
