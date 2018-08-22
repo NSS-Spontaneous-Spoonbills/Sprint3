@@ -4,10 +4,10 @@ This web application is the source code for the Bangazon e-commerce web site. It
 
 Students, you are inheriting a basic implementation that provides the following features:
 
-1. User registration 
-1. User login 
-1. User logout 
-1. Adding a product 
+1. User registration
+1. User login
+1. User logout
+1. Adding a product
 1. Listing products
 
 Please consult the backlog of issues and work with your product owner to implement the top priority tickets for your sprints.
@@ -44,8 +44,8 @@ Django, like Angular, has many built-in [helper tags and filters](https://docs.d
 
 ## Naming Conventions
 
-1. All branches to have lowercase initials 
-1. File name to match class name and describe use 
+1. All branches to have lowercase initials
+1. File name to match class name and describe use
 1. Every function and class needs a docstring
 1. Every model class needs a dunderscore string (__str__)
 1. All model names and field names should match the ERD exactly
@@ -67,10 +67,34 @@ Employee_View.py -> class Employee_View
 **Mac**
 Save a copy the ```django_data.sh``` script from the project root as django_data.sh in usr/local/bin (Which is at your machine's root, not your Users folder) Do not move the shell script file itself out of the project root.
 
-Run this script ``` django_data.sh website faker_factory ``` 
+Run this script ``` django_data.sh website faker_factory ```
 
 **Windows**
 In command line, run this script: ```. django_data.sh website faker_factory```
 
 **Both**
 After running the remigrate script, open DB Browser and run the SQL script from the [sql directory in project root](./sql/bangazon.sql)
+
+# Navbar Views
+
+#### If user isn't authenticated
+
+1. Home
+1. All Products
+1. Search
+1. Login/Register
+
+
+#### If user is authenticated
+
+1. Home
+1. All Products
+1. Search
+1. My Account*
+    - My Products
+    - Order History
+    - Payment
+1. Logout
+
+```*dropdown```
+
