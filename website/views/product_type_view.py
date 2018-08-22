@@ -2,7 +2,7 @@ from django.shortcuts import render
 from website.models import Product_Type, Product
 
 def Product_Type_List_View(request):
-    """Displays all prducts in the database
+    """Displays all products in the database
     Author: Jessica Swift
 
     [
@@ -27,6 +27,7 @@ def Product_Type_List_View(request):
                 },
                 {
                     'title': 'air mattress'
+                    'title':
                 }
             ]
         }
@@ -54,4 +55,4 @@ def Product_Type_List_View(request):
         }
         # append product type dict to final product types list
         product_types.append(product_type_dict)
-    return render(request, 'product/Product_Type_List.html', {'product_types': product_types})
+    return render(request, 'product/product_type_list.html', {'product_types': product_types})
