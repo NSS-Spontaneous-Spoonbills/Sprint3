@@ -27,6 +27,7 @@ def Product_Type_List_View(request):
                 },
                 {
                     'title': 'air mattress'
+                    'title':
                 }
             ]
         }
