@@ -14,10 +14,10 @@
 
   {% block content %}
 
-  <h3>My last 20 Products:</h3>
+  <h3>My lastest 20 Products:</h3>
   {% for latest_product in latest_products %}
   <div class="product_list">
-    <p>{{latest_product.title}}</p>
+    <a href="product/{{latest_product.id}}">{{latest_product.title}}</a>
   </div>
   {% endfor %} {% endblock %}
 </body>
