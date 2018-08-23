@@ -15,5 +15,5 @@ urlpatterns = [
     path('product/<pk>/', views.Product_Detail_View, name="product_detail"),
     url(r'^product_types$', views.Product_Type_List_View, name='product_types'),
     path('product_category/<pk>/', views.product_category_view, name='product_category'),
-    path('order_history', views.order_history, name='order_history'),
+    path('order_history/<pk>', views.order_history, name='order_history'),
 ]

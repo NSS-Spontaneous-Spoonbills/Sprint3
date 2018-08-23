@@ -22,7 +22,7 @@
         </div>
         {% endcomment %}
         {% if user.is_authenticated %}
-        <a href="{% url 'website:order_history' %}">Order History</a>
+        <a href="{% url 'website:order_history' pk=user.id %}">Order History</a>
         <a href="{% url 'website:payment_list' %}">Payment</a>
         <a href="{% url 'website:account_home' %}">My Account</a>
         <a href="{% url 'website:logout' %}">Logout</a>
