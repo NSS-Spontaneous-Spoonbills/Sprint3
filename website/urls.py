@@ -9,6 +9,7 @@ urlpatterns = [
     url(r'^logout$', views.user_logout, name='logout'),
     url(r'^register$', views.register, name='register'),
     path('payment_types/', views.payment_list_view, name='payment_list'),
+    path('payment_types/<pk>/', views.payment_detail_view, name='payment_detail'),
     url(r'^accounthome', views.my_account_home, name='account_home'),
     # url(r'^sell$', views.sell_product, name='sell'),
     # url(r'^products$', views.list_products, name='list_products'),
