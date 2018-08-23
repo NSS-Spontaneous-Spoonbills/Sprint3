@@ -3,7 +3,8 @@ from django.db import models
 
 
 class Customer(models.Model):
-    last_signon = models.CharField(blank=True, max_length=15, default='2018-07-16')
+    last_signon = models.CharField(
+        blank=True, max_length=15, default='2018-07-16')
     street = models.CharField(max_length=25)
     city = models.CharField(max_length=25)
     state = models.CharField(max_length=25)

@@ -5,4 +5,4 @@ find . -path "/$1/migrations/*.pyc"  -delete; #deletes all of the .pyc files in 
 rm db.sqlite3; #deletes the database file.
 python manage.py makemigrations $1; #creates the migration and the new db file.
 python manage.py migrate; #runs the migration.
-python manage.py $2 #runs the custom command to generate fake data and populate your tables with it
+# python manage.py $2 #runs the custom command to generate fake data and populate your tables with it
