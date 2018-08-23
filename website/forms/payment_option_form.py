@@ -12,4 +12,3 @@ class Payment_Option_Form(forms.ModelForm):
         model = Payment_Option
         fields = ('payment_type_id', 'account_number')
 
-        

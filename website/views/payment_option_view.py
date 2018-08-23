@@ -1,6 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from website.models import Customer, Payment_Option, Payment_Type
-from website.forms import Payment_Option_Form
+from website.forms import Payment_Option_Form, Payment_New_Form
 
 
 def payment_list_view(request):
@@ -30,14 +30,31 @@ def payment_update_view(request, pk):
         Author: Jacob Smith
     """
 
+    payment = get_object_or_404(Payment_Option, pk=pk)
+
     if request.method == 'POST':
-        form = Payment_Option_Form(requst.POST)
-        new_payment = form.save(commit=False)
-        new_payment.save()
-        return redirect('payment_option', pk=new_payment.pk)
+        form = Payment_Option_Form(request.POST, instance=payment)
+        update_payment = form.save(commit=False)
+        update_payment.save()
+        return redirect('website:payment_detail', pk=update_payment.pk)
     else:
         form = Payment_Option_Form()
-    return render(request, 'website/payment_option_update.html', {'form': form})
+        update_payment = form.save(commit=False)
+    return render(request, 'account/payment_option_update.html', {'form': form})
 
+
+def payment_new_view(request):
+    """Displays a form for adding a new payment type to your account
+    Author: Jacob Smith
+    """
+
+    if request.method == "POST":
+        form = Payment_New_Form(request.user, request.POST)
+        new_payment = form.save(commit=False)
+        new_payment.save()
+        return redirect('website:payment_detail', pk=new_payment.pk)
+    else:
+        form = Payment_New_Form(request.user)
+    return render(request, 'account/payment_option_new.html', {'form': form})
 
 

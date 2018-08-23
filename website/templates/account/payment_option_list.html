@@ -1,13 +1,13 @@
-{% extends 'index.html' %}{% block content %}
+{% extends 'nav_bar.html' %}{% block cool %}
 
 <h1>Your Payment Types</h1>
-{% comment %}<a href="{% url 'payment_new'  %}">Add A New Payment Type</a>{% endcomment %}
+<a href="{% url 'website:payment_new'%}">Add A New Payment Type</a>
 
 {% for payment in payments %}
 {% if payment.customer_id_id == user.customer.id  %}
 <div class="payment">
     <a href="{% url 'website:payment_detail' pk=payment.id %}">Payment Number {{payment.account_number}}</a>
-    <a>Update</a>
+    <a href="{% url 'website:payment_update' pk=payment.id %}">Update</a>
     {% endif %}
     {% comment %}
 
