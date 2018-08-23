@@ -8,7 +8,7 @@ class Customer(models.Model):
     city = models.CharField(max_length=25)
     state = models.CharField(max_length=25)
     zip = models.PositiveSmallIntegerField(blank=True)
-    phone = models.CharField(max_length=10)
+    phone = models.CharField(max_length=20)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
