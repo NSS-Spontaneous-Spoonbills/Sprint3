@@ -22,7 +22,7 @@ def edit_account_info(request, pk):
             return redirect('website:account_home')
 
     else: 
-        formCustomer= EditFormCustomer(instance=request.user)
+        formCustomer= EditFormCustomer(instance=customer_instance)
         formUser = EditFormUser(instance=request.user)
-    return render(request, 'account/account_edit.html', {'formC': formCustomer,
-    'formU': formUser})
+    return render(request, 'account/account_edit.html', {'customer_form': formCustomer,
+    'user_form': formUser})
