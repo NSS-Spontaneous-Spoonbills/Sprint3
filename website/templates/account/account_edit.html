@@ -1,0 +1,11 @@
+{% extends "account/my_account_index.html" %}
+
+{% block account %}
+<h1>Welcome to Bangazon!</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ formC.as_p }}
+    {{ formU.as_p }}
+    <button type="submit">click </button>
+</form>
+{% endblock %}
