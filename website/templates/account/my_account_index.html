@@ -9,14 +9,16 @@
     {% include "nav_bar.html" with nav_location=view.location %}
     <h1>My Account</h1>
     <h2>Account Created: {{ user.date_joined }}</h2>
+    {% block account %}
     <h2>Username: {{ user.username }}</h2>
+    <h2>Email: {{user.email}}</h2>
     <h2>First Name: {{ user.first_name }}</h2>
     <h2>Last Name: {{ user.last_name }}</h2>
     <h2>Phone Number: {{ user.customer.phone }}</h2>
-    <h2>Address: {{ user.customer.street }} {{customer.city}},{{customer.state}} {{customer.zip}}</h2>
+    <h2>Address: {{ user.customer.street }} {{user.customer.city}}, {{user.customer.state}} {{user.customer.zip}}</h2>
 
-    <a>Edit your account information</a>
-
+    <a href="{%url 'website:account_edit' pk=user.id %}">Edit your account information</a>
+    {% endblock %}
   </body>
 </html>
 
