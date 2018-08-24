@@ -10,7 +10,7 @@ class Customer(models.Model):
     state = models.CharField(max_length=25)
     zip = models.PositiveSmallIntegerField(blank=True)
     phone = models.CharField(max_length=10)
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    # user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.user.username}'
