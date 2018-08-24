@@ -4,3 +4,4 @@ from .product_type_view import Product_Type_List_View, product_category_view
 from .auth_view import index, login_user, register, user_logout
 from .payment_option_view import payment_list_view, payment_detail_view, payment_update_view, payment_new_view
 from .product_home_page_view import Product_Home_List_View
+from .account_edit_view import edit_account_info
