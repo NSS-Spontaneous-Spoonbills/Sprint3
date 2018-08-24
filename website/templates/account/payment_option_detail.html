@@ -1,9 +1,13 @@
 {% extends 'nav_bar.html' %}{% block cool %}
 
 
-<div>Customer Id:{{payment.customer_id_id}}</div>
-<div>Payment Id:{{payment.payment_type_id_id}}</div>
+{% for type in payment_types %}{% if payment.payment_type_id_id == type.id %}
+<div>{{ type.payment_type_name }}</div>
 <div>Account Number:{{ payment.account_number }}</div>
+{% endif %}{% endfor %}
+
+
+
 <a href="{% url 'website:payment_list' %}">Back</a>
 
 

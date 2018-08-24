@@ -18,7 +18,9 @@ def payment_detail_view(request, pk):
     """
 
     payment = get_object_or_404(Payment_Option, pk=pk)
-    return render(request, 'account/payment_option_detail.html', {'payment': payment})
+    payment_types = Payment_Type.objects.all()
+    customer = Customer.objects.all()
+    return render(request, 'account/payment_option_detail.html', {'payment': payment, 'payment_types': payment_types, 'customer': customer})
 
 
 def payment_update_view(request, pk):
