@@ -9,12 +9,6 @@
     <a href="{% url 'website:payment_detail' pk=payment.id %}">Payment Number {{payment.account_number}}</a>
     <a href="{% url 'website:payment_update' pk=payment.id %}">Update</a>
     {% endif %}
-    {% comment %}
 
-    {% if payment.has_been_assigned == False %}
-    <a href="{% url 'computer_delete' pk=computer.pk %}">Delete</a>
-
-    {% endif %}
-    {% endcomment %}
 </div>
 {% endfor %} {% endblock %}
